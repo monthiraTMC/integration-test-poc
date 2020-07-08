@@ -1,6 +1,6 @@
 import { applyMiddleware, createStore, compose, combineReducers } from 'redux';
 
-export function setupIntegrationTest(reducers, sagas) {
+export function setupIntegrationTest(reducers) {
   const dispatchSpy = jest.fn(() => ({}));
   const reducerSpy = (state, action) => dispatchSpy(action);
   const combinedReducers = combineReducers({
